@@ -3,6 +3,9 @@ body{
 	padding:0px;
 	font-family:"Helvetica Neue", Helvetica, Arial;
 }
+td {
+    padding: 24px;
+}
 
 #sidebar{
 	background:#151718;

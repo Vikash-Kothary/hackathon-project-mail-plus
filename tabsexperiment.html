@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <ul class="tabs"> 
+            <li><a href="#tab1"><span class="stateTab">NSW</span></a></li> 
+            <li><a href="#tab2"><span class="stateTab">QLD</span></a></li> 
+            <li><a href="#tab3"><span class="stateTab">VIC</span></a></li> 
+            <li><a href="#tab4"><span class="stateTab">SA</span></a></li> 
+            <li><a href="#tab5"><span class="stateTab">WA</span></a></li> 
+            <li><a href="#tab6"><span class="stateTab">ACT</span></a></li> 
+            <li><a href="#tab7"><span class="stateTab">NT</span></a></li> 
+            <li><a href="#tab8"><span class="stateTab">TAS</span></a></li>
+            <li><a href="/leaderboard/australia/"><span class="stateTab">AUSTRALIA</span></a></li>
+        </ul> 
+    </body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.tabs a').click(function(){
+                $('div[id^=tab]').hide();
+                $(this.href).show();
+                return false;
+            });	   
+        });
+       
+    </script>
+</html>
+
