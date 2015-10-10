@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+        <script src="http://code.jquery.com/jquery.js"></script>
+
+    <body>
+        <div id="sidebar">
+            <ul>
+                <li><a href="#">Yahoo Mail</a></li>
+                <li><a href="#">Google Mail</a></li>
+                <li><a href="#">Add another account...</a></li>
+            </ul>
+            
+            <button type="button" class="btn btn-default" aria-label="Right Align">
+                <span class="glyphicon glyphicon-plus" aria-hidden="false"></span>
+            </button>
+
+            <div id="sidebar-btn">
+                <span></span>
+                <span></span>
+                <span></span>  
+		    </div>
+
+	   </div>
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+
+	$(document).ready(function(){
+		$('#sidebar').toggleClass('visible');
+	});
+
+	</script>
+    </body>
+</html>
