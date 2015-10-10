@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Bootsrtap For Beginners</title>
+	<meta name="description" content="Hello World">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	
+
+</head>
+
+<body>
+
+	<header>
+		<div class="jumbotron">
+			<div class="container">
+				<h1>Hello World</h1>
+				<h3>Tabs in Bootstrap</h3>
+			</div> 
+		</div> 
+	</header>
+
+		<div class="container">
+			<ul class="nav nav-pills nav-justified" id="tab">
+				<li class="active"><a href="#Home" data-toggle="tab">School</a></li>
+				<li><a href="#About" data-toggle="tab">Promo</a></li>
+				<li><a href="#Videos" data-toggle="tab">Travel</a></li>
+			</ul>
+
+			<div class="tab-content">
+				<div class="tab-pane fade in active"  id="Home">
+					<p>First para Hi there 
+				</div>
+				<div class="tab-pane fade"  id="About">
+					<p>Second para Hi there 
+				</div>
+				<div class="tab-pane fade"  id="Videos">
+					<p>Third para Hi there 
+				</div>
+			</div>
+		</div>
+
+
+	<footer>
+		<div class="container">
+			<hr>
+
+            <a href="#" class="btn btn-primary">New Folder</a>
+            
+			<p>
+				<small><a href="http://facebook.com/askorama">Like me</a> On facebook</small></p>
+			<p>	<small><a href="http://twitter.com/wiredwiki">Ask whatever </a> On Twitter</small></p>
+			<p>	<small><a href="http://youtube.com/wiredwiki">Subscribe me</a> On Youtube</small>
+				
+			</p>
+		</div> <!-- end container -->
+	</footer>
+		
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $('.btn').click(function() {
+                $('#tab').append('<li><a href="#new_tab_id" data-toggle="tab">Tab Name</a></li>');
+                $('#tab a:last').tab('show');
+            })
+            $('#tab li').dblclick(function() {
+                $(this).text("new text");
+                console.log("clicked");
+            })
+            $('#tabContent').on('keyup', 'input[id^="pageTitle_tab"]', function(){
+                var index  = $(this).closest('.tab-pane').index();
+                $('#tabHeaders li:eq(' + (index + 1) + ') a').html(this.value)
+            })
+  });
+    </script>
+</body>	
+</html>
